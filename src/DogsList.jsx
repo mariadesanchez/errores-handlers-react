@@ -31,7 +31,7 @@ function DogsList() {
       <div>
         {/* <h2>Buscar por raza:</h2><button className="get-dog button"></button> */}
 
-        <select style={{fontSize:'1.5em'}} onChange={handleChange}>
+        <select  onChange={handleChange}>
         { breedsArray.map((breedData, index) => (
 
           <option  key={index} value = {breedData.breed}>{breedData.breed}</option>)

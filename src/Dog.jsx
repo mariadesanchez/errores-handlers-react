@@ -23,7 +23,7 @@ function Dog() {
               
     return (
         <div style={{backgroundColor:'#ECE6E5'}}>
-            <p style={{fontSize:'1.5em'}}>https://dog.ceo/api/breed/<input value ={breed} style={{fontSize:'1em',textAlign:'center'}}></input>/images/random<button style={{backgroundColor:'#6699ff'}} onClick={handleRefresh}>Fetch</button></p>
+            <p style={{fontSize:'1.5em'}}>https://dog.ceo/api/breed/<input value ={breed} style={{fontSize:'1em'}}></input>/images/random<button style={{backgroundColor:'#6699ff'}} onClick={handleRefresh}>Fetch</button></p>
           
             {/* <h2>Buscaste la raza: {breed}</h2> */}
             <img src={data.message} />
