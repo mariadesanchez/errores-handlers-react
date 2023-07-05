@@ -14,11 +14,13 @@ function App() {
    
       {/* SUGERENCIA: use ErrorBoundary como elemento principal de los demás componentes */}
       <ErrorBoundary>
-        {/* <DogsList/> */}
+      
         {/* Lo que debería mostrar en caso de que se acceda a la API */}
         {/* <Dog breed={"ruffles"} /> */} {/* Lo que debería mostrar en caso de que haya algún error */}
        
-       <Dog breed={"husky"}/>
+       <DogsList/>
+       <Dog/>
+    
         </ErrorBoundary>
         <ToastContainer/>
   

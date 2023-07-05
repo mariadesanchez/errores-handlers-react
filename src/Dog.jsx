@@ -1,10 +1,11 @@
 /* Se importa el custom hook y los status */
 import { statusList, useFetch } from "./UseFetch"
+import DogsList from './DogsList'
 
 
 
-function Dog({breed}) {
-
+function Dog() {
+    const breed = localStorage.getItem('breed')
     /* Utilizamos el custom Hook para acceder a la API con la siguiente URL(endpoint) */
     const { data, status } = useFetch(`https://dog.ceo/api/breed/${breed}/images/random`
     );
@@ -15,12 +16,16 @@ function Dog({breed}) {
     }
     if (status === statusList.SUCCESS) {
        
+   
         const handleRefresh = () => {
-            window.location.reload();
+            window.location.reload(); // Recargar la página
           };
+              
     return (
-        <div>  <button style ={{backgroundColor:'orange'}} onClick={handleRefresh}>Buscar</button>
-            <h2>Has buscado por raza: {breed}</h2>
+        <div style={{backgroundColor:'#ECE6E5'}}>
+            <p style={{fontSize:'1.5em'}}>https://dog.ceo/api/breed/<input value ={breed} style={{fontSize:'1em',textAlign:'center'}}></input>/images/random<button style={{backgroundColor:'#6699ff'}} onClick={handleRefresh}>Fetch</button></p>
+          
+            {/* <h2>Buscaste la raza: {breed}</h2> */}
             <img src={data.message} />
           
         </div>
